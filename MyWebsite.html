@@ -1,0 +1,239 @@
+<html id="theme-select">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oluebube's Website</title>
+    <style>
+      :root {
+        --Bg: white;
+        --bCol: black
+        --sPosition: translateX(0%);
+        --hhhBg: #a5ff00;
+      }
+      
+      .dark-mode {
+        --Bg: black;
+        --bCol: #ffffff;
+        --hhhCol: #161f22;
+        --sPosition: translateX(101.5%);
+        --hhhBg: #9a78c4;
+      }
+      
+      * {
+        margin: 0;
+        padding: 0;
+        line-height: 9.7vw;
+      }
+      
+      body {
+       background: var(--Bg);
+        color: var(--bCol);
+        transition: 1s; 
+      }
+      
+      #heading {
+        font-size: 18.8vw;
+        margin: 8.3vw 1.38vw 6.94vw;
+        color: #676767 /*#949c9e*/;
+        animation: neon 7s linear infinite;
+      }
+      
+      @keyframes neon {
+         0% {
+          text-shadow: 0px 0px 5.5vw #00ccff, 0px 0px 11.1vw #00ccff, 0px 0px 27.77vw #00ccff, 0px 0px 55.55vw #00ccff;
+          color: white;
+        }
+        
+        25% {
+          text-shadow: none;
+          color: #858585;
+        }
+        
+        50% {
+          text-shadow: 0px 0px 5.5vw #00ccff, 0px 0px 11.1vw #00ccff, 0px 0px 27.77vw #00ccff, 0px 0px 55.55vw #00ccff;
+          color: white;
+        }
+        
+        100% {
+          text-shadow: none;
+          color: #858585;
+        }
+      }
+      
+      section:not([id="slider"]) + section:not([class="images"]) {
+        margin-bottom: 8.33vw;
+        margin: 8.33vw;
+      }
+      
+      p {
+        font-size: 5vw;
+      }
+      
+      h2 {
+        font-size: 10vw;
+        text-transform: uppercase;
+        margin-bottom: 5.5vw;
+      }
+      
+      h3 {
+        text-transform: capitalize;
+        background: var(--hhhBg);
+        padding: 4.16vw;
+        border-radius: 4.16vw 0;
+        color: var(--hhhCol);
+        transition: 0.5s;
+      }
+      
+      .head {
+        margin-bottom: 1.38vw;
+      }
+      
+      .head p {
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s;
+      }
+      
+      .head:hover h3{
+        background: #ff6b0d;
+        border-radius: 4.16vw 4.16vw 0 0;
+      }
+      
+      .head:hover p {
+        height: 83.33vw;
+        margin-bottom: 8.33vw;
+        box-shadow: 1.38vw .83vw 1.38vw #6c7d81;
+      }
+      
+      #note {
+        padding: 4.16vw;
+        margin-top: 4.16vw;
+        border-radius: 5.5vw;
+        box-shadow: 0px 0px 1.38vw #6c7d81;
+      }
+      
+      
+      
+      #slide {
+        width: 27.77vw;
+        height: 13.8vw;
+        margin: 5.5vw;
+        background: red;
+        border-radius: 11.1vw;
+        position: relative;
+      }
+      
+      #slider {
+        position: absolute;
+        width: 13.3vw;
+        height: 13.3vw;
+        background: yellow;
+        border-radius: 50%;
+        top: .27vw;
+        left: .27vw;
+        transition: .5s;
+        transform: var(--sPosition);
+      }
+      
+      section.images {
+        position: relative;
+        width: 100vw;
+        height: 100%;
+      }
+      
+      img {
+        position: absolute;
+        width: 100vw;
+        height: 100%;
+      }
+      
+      .images::after {
+        content: '';
+        position: absolute;
+        top: 90%;
+        width: 100%;
+        height: 27.7vw;
+        background: linear-gradient(to top, white, transparent, #60bed6, transparent);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="slide" onclick="dark()">
+        <section id="slider"></section>
+      </div>
+      
+      <section class="images"> 
+        <img src="bird1.png" alt="">
+        <img src="bird2.png" alt="">
+        <img src="forest.png" alt="">
+        <img src="water.png" alt="">
+        <img src="rocks.png" alt="">
+      </section>
+      
+      <section id="about">
+        <h1 id="heading">Hello!</h1>
+        <p> Welcome to my website! My name is Oluebube Ivy Anukam. I am an aspiring (and self-learning) front-end developer on Mondays, Wednesdays, Fridays and Saturdays; aspiring (and also self-learning) game developer on Tuesdays and Fridays and a couch on Sundays. I write on Mondays.</p>
+      
+        <p id="note"><b>NOTE:</b> I do not have access to a laptop, desktop or any device traditionally typically used to write code. All coding is done in my phone and because of this, I don't know how responsive or bug-free anything here is. If you do run into a problem or would just like to comment on something, your much appreciated feedback can be dropped <a href="#contact">here</a>. <br>EXTRA NOTE: If you do run into a problem (too tiny font, unresponsive etc), try minimizing your browser to the dimensions of a phone screen.</p>
+      </section>
+      
+      <section id="projects">
+      <h2>Projects</h2>
+      <div id="clock" class="head">
+       <h3> Choose your clock</h3>
+       <p>Go through three differently designed themes for a <a href="prt2.html" target="_blank">clock</a>. This is my favorite and the one I took the most time with. I intend to turn this into a clock app that displays any of the chosen themes on the lockscreen of my phone. Coded in HTML, CSS and Javascript. </p>
+      </div>
+      
+      <div id="website" class="head">
+        <h3>My website</h3>
+        <p>You're already <a href="#" target="_blank">here</a>! Welcome again! Toggle between dark and light mode on this website with parallax scrolling added and some cool(at least I think so) effects.</p>
+      </div>
+      
+      <div id="2048" class="head">
+        <h3>2048</h3>
+        <p>Thanks to Gabriele Cirulli, the creator of 2048, for making her code open source. So many others (me included) learn with it and make <a href="2048.html" target="_blank">this</a> and other versions.</p>
+      </div>
+      
+      <div id="puzzle" class="head">
+        <h3>Liquid Sort Puzzle</h3>
+        <p>There's a very popular puzzle game on Google PlayStore called. <a href="puzzle.html" target="_blank">This</a> is my version.</p>
+      </div>
+      
+      <div id="calc" class="head">
+        <h3>Calculator</h3>
+        <p>It's a <a href="calc.html" target="_blank">calculator</a>. A simple one.</p>
+      </div>
+      
+      <div id="nav-bar" class="head">
+        <h3>Navigation bar</h3>
+        <p>A <a href="nav-bar.html" target="_blank">navigation bar </a>for a website. Hover option for effect.</p>
+      </div>
+      
+      <div id="ttt" class="head">
+        <h3>Tic Tac Toe</h3>
+        <p>Play a game of <a href="ttt.html" target="_blank">Tic Tac Toe</a>.</p>
+      </div>
+      
+      <div id="hangman" class="head">
+        <h3>Hangman</h3>
+        <p>My own version of the popular game <a href="hangman.html" target="_blank">Hangman</a>.</p>
+      </div>
+      <div>
+      <p>Remaining Projects. Projects are uploaded when two events which occur once in a blue moon occur simultaneously: when the power company decides to supply electricity and when I have an internet connection. Your fervent prayers are imperative to the upload of the remaining projects. Stay safe.</p>
+      </div>
+      </section>
+      
+      <h1 id="contact">Contact Me</h1>
+    </div>
+    
+    <div> The glassmorphism theme is supposed to give a frosted glass effect but Chrome, Firefox and some minor browsers don't support the CSS rule. </div>
+    
+    <script>
+    
+    function dark() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+}
+    </script>
+  </body>
+</html>
