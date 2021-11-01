@@ -144,7 +144,7 @@
         height: 100%;
       }
       
-      img {
+      img:not([id="time"]) {
         position: absolute;
         width: 100vw;
         height: 100%;
@@ -230,7 +230,7 @@
     </div>
     
     <div> The glassmorphism theme is supposed to give a frosted glass effect but Chrome, Firefox and some minor browsers don't support the CSS property that enables this.
-    <img src="clock.png" />
+    <img src="clock.png" id="time"/>
     </div>
     
     <script>
