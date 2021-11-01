@@ -115,8 +115,11 @@
         box-shadow: 0px 0px 1.38vw #6c7d81;
       }
       
-      
-      
+      #toggle {
+        position: absolute;
+        z-index: 23;
+      }
+
       #slide {
         width: 27.77vw;
         height: 13.8vw;
@@ -142,7 +145,7 @@
         position: relative;
         background: url(bg.jpg);
         width: 100vw;
-        height: 100%;
+        height: 1000px;
         overflow: hidden;
       }
       
@@ -164,9 +167,11 @@
   </head>
   <body>
     <div class="container">
+     <div id="toggle">
       <div id="slide" onclick="dark()">
         <section id="slider"></section>
       </div>
+     </div>
       
       <section class="images">
         <img src="mountain1.png" alt="">
