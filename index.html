@@ -8,6 +8,8 @@
         --bCol: black
         --sPosition: translateX(0%);
         --hhhBg: #a5ff00;
+        --slCol: white;
+        --sCol: grey;
       }
       
       .dark-mode {
@@ -16,6 +18,7 @@
         --hhhCol: #161f22;
         --sPosition: translateX(101.5%);
         --hhhBg: #9a78c4;
+        --sCol: pink;
       }
       
       * {
@@ -106,6 +109,7 @@
       
       #note {
         padding: 4.16vw;
+        background: #60bed6;
         margin-top: 4.16vw;
         border-radius: 5.5vw;
         box-shadow: 0px 0px 1.38vw #6c7d81;
@@ -117,7 +121,7 @@
         width: 27.77vw;
         height: 13.8vw;
         margin: 5.5vw;
-        background: red;
+        background: var(--sCol);
         border-radius: 11.1vw;
         position: relative;
       }
@@ -126,7 +130,7 @@
         position: absolute;
         width: 13.3vw;
         height: 13.3vw;
-        background: yellow;
+        background: var(--slCol);
         border-radius: 50%;
         top: .27vw;
         left: .27vw;
@@ -152,7 +156,7 @@
         top: 90%;
         width: 100%;
         height: 27.7vw;
-        background: linear-gradient(to top, white, transparent, #60bed6, transparent);
+       /* background: linear-gradient(to top, white, transparent, #60bed6, transparent); */
       }
     </style>
   </head>
@@ -184,7 +188,7 @@
       
       <div id="website" class="head">
         <h3>My website</h3>
-        <p>You're already <a href="#" target="_blank">here</a>! Welcome again! Toggle between dark and light mode on this website with parallax scrolling added and some cool(at least I think so) effects.</p>
+        <p>You're already <a href="#" target="_blank">here</a>! Welcome again! Toggle between dark and light mode on this website with parallax scrolling (will incorporate this soon. See remaining projects. Please check back in a week) added and some cool(at least I think so) effects.</p>
       </div>
       
       <div id="2048" class="head">
