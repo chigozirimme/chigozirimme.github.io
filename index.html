@@ -28,6 +28,7 @@
         --hhhBg: #9a78c4;
         --sCol: #f0ba5f;
         --nShadow: 0.55vw 0.55vw 1.38vw #45d3f7;
+        --btnBorder: 0.27vw solid #45d3f7;
       }
       
       * {
@@ -252,6 +253,7 @@
         margin-top: 5.55vw;
         color: white;
         background: yellow;
+        border: var(--btnBorder);
         text-transform: uppercase;
         padding: 2.77vw;
         width: 19.4vw;
@@ -279,7 +281,7 @@
       }
       
       div.two, div.four {
-        background: linear-gradient(to right, transparent 50%, #f76122);
+        background: linear-gradient(to right, transparent 50%, #45d3f7/*#f76122*/);
         clip-path: polygon(100% 0%, 50% 0%, 50% 100%, 100% 100%);
         transition: .5s;
       }
